@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-landing-header',
@@ -21,6 +21,14 @@ export class LandingHeaderComponent {
     @Output()
     registerChange = new EventEmitter<boolean>();
 
+    side = true;
+
+    @ViewChild('sidebar') sidebar!: ElementRef;
+
+    sidebarOpen = "absolute transition-all duration-500 ease-in-out transform translate-x-full md:hidden w-1/2 p-2 h-full  bg-white text-black z-20";
+
+    sidebarClose = "absolute transition-all duration-500 ease-in-out transform -translate-x-full md:hidden w-1/2 p-2 h-full bg-white text-black z-20";
+
 
     openLogin() {
         this.login = !this.login;
@@ -32,4 +40,12 @@ export class LandingHeaderComponent {
         this.registerChange.emit(this.register);
     }
 
+    openSide() {
+        this.side = !this.side;
+        if (!this.side) {
+            this.sidebar.nativeElement.className = this.sidebarOpen;
+        } else {
+            this.sidebar.nativeElement.className = this.sidebarClose;
+        }
+    }
 }
