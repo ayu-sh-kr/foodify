@@ -1,0 +1,28 @@
+<div class="my-5 lg:mx-16 md:mx-12 mx-8">
+    <div class="text-center font-okra font-light text-3xl sm:text-4xl md:text-5xl p-2">
+        Popular locations in <span class="inline-flex items-center object-contain py-1 h-10 w-10"><img src="/assets/images/india.png" alt="image"></span> India
+    </div>
+
+    <div class="flex items-center justify-center mt-10 text-center max-w-[900px] container mx-auto">
+        <p class="font-okra text-xl text-gray-700 opacity-85">
+            From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food, Foodify covers it all.
+            Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal.
+        </p>
+    </div>
+
+    <div class="flex flex-wrap justify-between">
+        @for (restaurant of locations; track restaurant){
+            <div class="flex bg-white text-slate-600 font-light shadow-md border
+            rounded-md p-4 text-xl font-okra justify-between w-[353px] my-5 cursor-pointer">
+                <div class="">
+                    {{ restaurant }} Restaurants
+                </div>
+                <div class="py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+        }
+    </div>
+</div>
