@@ -25,9 +25,9 @@ export class LandingHeaderComponent {
 
     @ViewChild('sidebar') sidebar!: ElementRef;
 
-    sidebarOpen = "absolute transition-all duration-500 ease-in-out transform translate-x-full md:hidden w-2/3 sm:w-1/2 p-2 h-full  bg-white text-black z-20";
+    sidebarOpen = "absolute transition-all duration-[2s] ease-in-out transform translate-x-0 md:hidden w-2/3 sm:w-1/2 p-2 h-full  bg-white text-black z-20";
 
-    sidebarClose = "absolute transition-all duration-500 ease-in-out transform -translate-x-full md:hidden w-2/3 sm:w-1/2 p-2 h-full bg-white text-black z-20";
+    sidebarClose = "absolute transition-all duration-[2s] ease-in-out transform -translate-x-full md:hidden w-1/2 p-2 h-full bg-white text-black z-20";
 
 
     openLogin() {
