@@ -17,9 +17,4 @@ import {MiddleSectionComponent} from "./landing/middle-section/middle-section.co
 })
 export class AppComponent {
     title = 'foodify';
-
-    login = true;
-    register = true;
-
-    locations:string[] = ['Varanasi', 'New Delhi', 'Bhadohi', 'Agra', 'Mumbai', 'Ranch', 'Patna'];
 }
