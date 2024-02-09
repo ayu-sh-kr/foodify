@@ -23,8 +23,6 @@ export class CategoryHeaderComponent {
     deliveryImage: string = this.srcDeliveryBurned;
     popularImage: string = this.srcPopularBurned;
 
-    active = 'text-rose-600 p-2 border-rose-600'
-
     setActive(div: string) {
         this.activeDiv = div;
 
