@@ -12,14 +12,14 @@ export class CarouselComponent implements AfterViewInit {
 
 
     images = ['/assets/images/food-slider/landing2.png',
-        '/assets/images/food-slider/landing.png', "/assets/images/food-slider/slider1.png"];
+        '/assets/images/food-slider/landing.jpg', "/assets/images/food-slider/slider1.png"];
 
     swiper!: Swiper
 
     ngAfterViewInit(): void {
         this.swiper = new Swiper('.swiper', {
             direction: "horizontal",
-            loop: true,
+            loop: false,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
