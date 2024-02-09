@@ -1,0 +1,35 @@
+<div class="bg-slate-50 p-2 relative">
+    <div class="text-3xl mt-4 mb-7 flex justify-between items-center">
+        <div class="font-helvetica font-semibold">Top Restaurants</div>
+        <p class="block sm:hidden text-rose-600 text-sm font-okra cursor-pointer">All restaurants in Varanasi</p>
+    </div>
+    <div class="flex justify-between items-center my-4">
+        <p class="text-lg font-okra font-light text-slate-600">Explore curated lists of top restaurants, cafes, pubs, and bars in Varanasi, based on trends</p>
+        <p class="sm:block hidden text-rose-600 cursor-pointer font-okra">All collections in Varanasi</p>
+    </div>
+    <div class="relative p-2 my-4">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                @for (restaurant of restaurants; track restaurant){
+                    <div class="swiper-slide">
+                        <img src="{{restaurant.image}}" class="block w-full h-full">
+                        <div class="absolute top-0 right-0">
+                            <div class="font-semibold font-okra text-white px-3 py-2">
+                                {{restaurant.name}}
+                            </div>
+                            <div class="font-semibold font-okra text-white px-3">
+                                Rating: <span class="text-rose-400 font-extrabold">{{restaurant.rating}}</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-scrollbar"></div>
+        <div class="swiper-pagination"></div>
+
+    </div>
+</div>

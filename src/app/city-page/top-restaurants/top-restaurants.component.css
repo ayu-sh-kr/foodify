@@ -1,0 +1,16 @@
+.swiper-slide{
+    @apply bg-white rounded-md  relative;
+}
+
+.swiper-slide img{
+    @apply block w-full h-[380px] object-cover;
+}
+.swiper-wrapper{
+    @apply flex;
+    @apply items-center sm:mx-0 w-full sm:w-[260px] h-[380px] relative;
+}
+
+
+.swiper-button-next, .swiper-button-prev{
+    @apply text-rose-600
+}
