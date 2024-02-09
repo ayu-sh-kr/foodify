@@ -1,0 +1,13 @@
+.active-burned{
+    @apply bg-gray-400
+}
+
+.active-colored{
+    @apply bg-blue-400
+}
+
+.active{
+    @apply text-rose-600;
+    @apply border-b-rose-600;
+}
+

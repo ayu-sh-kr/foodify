@@ -1,0 +1,8 @@
+<div class="md:mx-auto w-full">
+    <home-header [(login)]="login" [(register)]="register"></home-header>
+    <app-login [hidden]="login" [(login)]="login"></app-login>
+    <app-register [hidden]="register" [(register)]="register"></app-register>
+    <app-carousel></app-carousel>
+    <category-header></category-header>
+</div>
+
