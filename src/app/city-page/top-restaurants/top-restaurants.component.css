@@ -1,11 +1,11 @@
-.swiper-slide{
-    @apply bg-white rounded-md  relative;
+.swiper-slide-restaurants{
+    @apply bg-white rounded-md relative;
 }
 
-.swiper-slide img{
+.swiper-img{
     @apply block w-full h-[380px] object-cover;
 }
-.swiper-wrapper{
+.swiper-wrapper-restaurants{
     @apply flex;
     @apply items-center sm:mx-0 w-full sm:w-[260px] h-[380px] relative;
 }

@@ -13,7 +13,7 @@ export class TopRestaurantsComponent implements AfterViewInit{
 
     swiper!:Swiper;
     ngAfterViewInit(): void {
-        this.swiper = new Swiper('.swiper', {
+        this.swiper = new Swiper('.swiper-restaurants', {
             slidesPerView: 2,
             loop: false,
             breakpoints: {

@@ -17,9 +17,23 @@ export class CarouselComponent implements AfterViewInit {
     swiper!: Swiper
 
     ngAfterViewInit(): void {
-        this.swiper = new Swiper('.swiper', {
-            direction: "horizontal",
+        this.swiper = new Swiper('.swiper-carousel', {
             loop: false,
+            slidesPerView: 1,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                480: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 1,
+                },
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -29,12 +43,9 @@ export class CarouselComponent implements AfterViewInit {
                 el: '.swiper-pagination',
                 clickable: true,
             },
-            scrollbar: {
-                el: '.swiper-scrollbar'
-            },
             autoplay: {
                 delay: 5000,
-                disableOnInteraction: false
+                disableOnInteraction: true,
             }
         })
     }
