@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import {Collection} from "../../utils/types/BasicTypes";
+import {GenericCarouselComponent} from "../../utils/generic-carousel/generic-carousel.component";
 
 @Component({
   selector: 'collection',
   standalone: true,
-  imports: [],
+    imports: [
+        GenericCarouselComponent
+    ],
   templateUrl: './collection.component.html',
   styleUrl: './collection.component.css'
 })

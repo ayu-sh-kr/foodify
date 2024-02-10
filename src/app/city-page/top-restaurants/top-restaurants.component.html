@@ -7,29 +7,6 @@
         <p class="text-lg font-okra font-light text-slate-600">Explore curated lists of top restaurants, cafes, pubs, and bars in Varanasi, based on trends</p>
         <p class="sm:block hidden text-rose-600 cursor-pointer font-okra">All restaurants in Varanasi</p>
     </div>
-    <div class="relative p-2 my-4">
-        <div class="swiper">
-            <div class="swiper-wrapper swiper-wrapper-restaurants">
-                @for (restaurant of restaurants; track restaurant){
-                    <div class="swiper-slide swiper-slide-restaurants">
-                        <img src="{{restaurant.image}}" class="block w-full h-full swiper-img">
-                        <div class="absolute top-0 right-0">
-                            <div class="font-bold font-helvetica text-slate-100 px-3 py-2">
-                                {{restaurant.name}}
-                            </div>
-                            <div class="font-semibold font-okra text-white px-3">
-                                Rating: <span class="text-rose-400 font-extrabold">{{restaurant.rating}}</span>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-        <div class="swiper-scrollbar"></div>
-        <div class="swiper-pagination"></div>
-
-    </div>
+     <app-generic-carousel [data]="restaurants" [titleColor]="'text-slate-100'"></app-generic-carousel>
 </div>
+

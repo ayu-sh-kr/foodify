@@ -1,0 +1,24 @@
+<div class="relative p-2 my-4">
+    <div class="swiper swiper-restaurants">
+        <div class="swiper-wrapper swiper-wrapper-restaurants">
+            @for (unit of data; track unit) {
+                <div class="swiper-slide swiper-slide-restaurants">
+                    <img src="{{unit.image}}" class="block w-full h-full swiper-img">
+                    <div class="absolute" [ngClass]="position">
+                        <div class="font-bold font-helvetica px-3 py-2" [ngClass]="titleColor">
+                            {{ unit.name }}
+                        </div>
+                        <div class="font-semibold font-okra text-white px-3">
+                            Rating: <span class="text-rose-400 font-extrabold">{{ unit.rating }}</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+</div>

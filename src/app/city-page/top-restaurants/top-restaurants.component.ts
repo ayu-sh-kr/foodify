@@ -1,17 +1,21 @@
 import {AfterViewInit, Component} from '@angular/core';
 import {Restaurant} from "../../utils/types/BasicTypes";
 import Swiper from "swiper";
+import {GenericCarouselComponent} from "../../utils/generic-carousel/generic-carousel.component";
 
 @Component({
   selector: 'top-restaurants',
   standalone: true,
-  imports: [],
+    imports: [
+        GenericCarouselComponent
+    ],
   templateUrl: './top-restaurants.component.html',
   styleUrl: './top-restaurants.component.css'
 })
 export class TopRestaurantsComponent implements AfterViewInit{
 
     swiper!:Swiper;
+
     ngAfterViewInit(): void {
         this.swiper = new Swiper('.swiper-restaurants', {
             slidesPerView: 2,

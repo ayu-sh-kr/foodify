@@ -2,14 +2,14 @@
 
 export class Collection{
     public image!:string;
-    public title!:string;
+    public name!:string;
     public description!:string;
     public count!:number;
 
 
-    constructor(image: string, title: string, description: string, count: number) {
+    constructor(image: string, name: string, description: string, count: number) {
         this.image = image;
-        this.title = title;
+        this.name = name;
         this.description = description;
         this.count = count;
     }

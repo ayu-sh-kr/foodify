@@ -1,11 +1,11 @@
-<div class="md:mx-auto w-full">
-    <home-header [(login)]="login" [(register)]="register"></home-header>
+<home-header [(login)]="login" [(register)]="register"></home-header>
+<div class="mx-auto w-full max-w-6xl">
     <app-login [hidden]="login" [(login)]="login"></app-login>
     <app-register [hidden]="register" [(register)]="register"></app-register>
     <app-carousel></app-carousel>
     <category-header></category-header>
     <collection></collection>
     <top-restaurants></top-restaurants>
-    <app-footer></app-footer>
 </div>
+<app-footer></app-footer>
 

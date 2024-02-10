@@ -7,21 +7,5 @@
         <p class="text-lg font-okra font-light text-slate-600">Choose from the collection of restaurants, pubs, and bars in Varanasi based on most perfect pic by users like you</p>
         <p class="sm:block hidden text-rose-600 cursor-pointer font-okra">All collections in Varanasi</p>
     </div>
-    <div class="flex gap-10 justify-center sm:justify-self-auto md:justify-self-auto flex-wrap items-center relative p-2" >
-        @for (collection of collections; track collection){
-            <div class="relative w-[260px] gap-5 mx-5 sm:mx-0 md:w-[320px] h-[380px] my-5 object-contain hover:scale-105 hover:shadow-xl">
-                <div class="w-full h-full">
-                    <img src="{{collection.image}}" alt="" class="w-full h-full object-cover">
-                </div>
-                <div class="absolute left-1 bottom-0">
-                    <div class="text-rose-600 text-lg font-helvetica">
-                        {{ collection.title }}
-                    </div>
-                    <div class="text-white font-okra">
-                         {{collection.count}} Places
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+    <app-generic-carousel [data]="collections" [titleColor]="'text-rose-400'"></app-generic-carousel>
 </div>
