@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {Component} from '@angular/core';
 import {Restaurant} from "../../utils/types/BasicTypes";
 import Swiper from "swiper";
 import {GenericCarouselComponent} from "../../utils/generic-carousel/generic-carousel.component";
@@ -12,51 +12,10 @@ import {GenericCarouselComponent} from "../../utils/generic-carousel/generic-car
   templateUrl: './top-restaurants.component.html',
   styleUrl: './top-restaurants.component.css'
 })
-export class TopRestaurantsComponent implements AfterViewInit{
+export class TopRestaurantsComponent{
 
     swiper!:Swiper;
 
-    ngAfterViewInit(): void {
-        this.swiper = new Swiper('.swiper-restaurants', {
-            slidesPerView: 2,
-            loop: false,
-            breakpoints: {
-                0:{
-                    slidesPerView: 1,
-                },
-
-                480: {
-                    slidesPerView: 2,
-                },
-
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
-                },
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar'
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-
-            }
-        })
-    }
 
     restaurants:Restaurant[] = [
         {

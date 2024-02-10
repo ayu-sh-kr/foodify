@@ -18,8 +18,6 @@ export class CarouselComponent implements AfterViewInit {
 
     ngAfterViewInit(): void {
         this.swiper = new Swiper('.swiper-carousel', {
-            loop: false,
-            slidesPerView: 1,
             breakpoints: {
                 0: {
                     slidesPerView: 1,
@@ -48,13 +46,5 @@ export class CarouselComponent implements AfterViewInit {
                 disableOnInteraction: true,
             }
         })
-    }
-
-    nextSlide() {
-        this.swiper.slideNext();
-    }
-
-    prevSlide() {
-        this.swiper.slidePrev();
     }
 }
