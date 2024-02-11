@@ -1,11 +1,16 @@
 <home-header [(login)]="login" [(register)]="register"></home-header>
-<div class="mx-auto w-full max-w-6xl">
+<div class="mx-auto w-full max-w-6xl relative">
     <app-login [hidden]="login" [(login)]="login"></app-login>
     <app-register [hidden]="register" [(register)]="register"></app-register>
     <app-carousel></app-carousel>
     <category-header></category-header>
     <collection></collection>
     <top-restaurants></top-restaurants>
+    <top-food></top-food>
+    <div class="sticky top-0 z-30">
+        <filter-header [(filter)]="filter" ></filter-header>
+    </div>
+    <app-filter [(filter)]="filter" [hidden]="filter"></app-filter>
 </div>
 <app-footer></app-footer>
 

@@ -1,0 +1,12 @@
+.login-section{
+    @apply flex gap-2 my-4 font-helvetica
+}
+
+.input-element{
+    @apply w-full border px-3 py-2
+    rounded-md focus:outline-none focus:ring-orange-600 focus:ring-1
+}
+
+.back-blur{
+    @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 backdrop-blur-sm z-30 flex justify-center items-center;
+}

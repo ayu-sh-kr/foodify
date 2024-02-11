@@ -8,6 +8,9 @@ import {Collection} from "../../utils/types/BasicTypes";
 import {CollectionComponent} from "../collection/collection.component";
 import {FooterComponent} from "../../landing/footer/footer.component";
 import {TopRestaurantsComponent} from "../top-restaurants/top-restaurants.component";
+import {TopFoodComponent} from "../top-food/top-food.component";
+import {FilterHeaderComponent} from "../../utils/filter-impl/filter-header/filter-header.component";
+import {FilterComponent} from "../../utils/filter-impl/filter/filter.component";
 
 @Component({
   selector: 'app-home',
@@ -20,7 +23,10 @@ import {TopRestaurantsComponent} from "../top-restaurants/top-restaurants.compon
         CategoryHeaderComponent,
         CollectionComponent,
         FooterComponent,
-        TopRestaurantsComponent
+        TopRestaurantsComponent,
+        TopFoodComponent,
+        FilterHeaderComponent,
+        FilterComponent
     ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -30,6 +36,7 @@ export class HomeComponent {
     loggedIn = false;
     login = true;
     register = true
+    filter = true;
 
 }
 
