@@ -1,1 +1,39 @@
-<p>list works!</p>
+<div class="p-2 flex justify-center flex-wrap sm:justify-self-center gap-5 min-w-[320px] w-full border-t-2">
+
+    @for (restaurant of restaurantDetails; track restaurant){
+        <div class="bg-white rounded-md px-2 py-3 min-w-[280px] w-[340px] overflow-hidden hover:shadow-xl">
+            <div class="rounded-xl overflow-y-hidden h-[248px] overflow-hidden">
+                <img src="{{restaurant.image}}"
+                     class="rounded-xl w-full h-full object-cover" alt="yellow-door">
+            </div>
+            <div class="flex justify-between items-center py-1 font-helvetica">
+                <div class=" text-xl text-slate-800 font-semibold w-2/3 line-clamp-1">
+                    {{ restaurant.name }}
+                </div>
+                <div class="w-fit text-lg bg-green-800 rounded-md px-1 text-white font-semibold">
+                    {{ restaurant.rating }} &#9733;
+                </div>
+            </div>
+            <div class="flex justify-between items-center py-1 font-okra text-slate-600 text-sm">
+                <div class="w-2/3 line-clamp-1">
+                    {{ restaurant.locale }}
+                </div>
+                <div class="w-[70px] px-1 line-clamp-1">
+                    {{ restaurant.specialPack }}
+                </div>
+            </div>
+            <div class="font-light text-sm line-clamp-1 text-slate-500 font-helvetica">
+                {{ restaurant.localisedAddress }}
+            </div>
+            <div class="flex justify-between items-center py-1 font-okra text-slate-600 text-sm">
+                <div class="text-rose-600">
+                    {{ restaurant.timing }}
+                </div>
+                <div>
+                    {{ restaurant.distance }}
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

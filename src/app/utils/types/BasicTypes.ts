@@ -42,3 +42,27 @@ export class Food{
         this.rating = rating;
     }
 }
+
+export class RestaurantDetails{
+    public name!:string;
+    public locale!:string;
+    public specialPack!:string;
+    public rating!:number;
+    public timing!:string;
+    public distance!:number;
+    public localisedAddress!:string;
+    public image!:string;
+
+
+    constructor(name: string, locale: string, specialPack: string, rating: number,
+                timing: string, distance: number, localisedAddress: string, image: string) {
+        this.name = name;
+        this.locale = locale;
+        this.specialPack = specialPack;
+        this.rating = rating;
+        this.timing = timing;
+        this.distance = distance;
+        this.localisedAddress = localisedAddress;
+        this.image = image;
+    }
+}

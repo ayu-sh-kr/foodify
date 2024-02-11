@@ -11,6 +11,7 @@ import {TopRestaurantsComponent} from "../top-restaurants/top-restaurants.compon
 import {TopFoodComponent} from "../top-food/top-food.component";
 import {FilterHeaderComponent} from "../../utils/filter-impl/filter-header/filter-header.component";
 import {FilterComponent} from "../../utils/filter-impl/filter/filter.component";
+import {ListComponent} from "../../utils/list/list.component";
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,8 @@ import {FilterComponent} from "../../utils/filter-impl/filter/filter.component";
         TopRestaurantsComponent,
         TopFoodComponent,
         FilterHeaderComponent,
-        FilterComponent
+        FilterComponent,
+        ListComponent
     ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
