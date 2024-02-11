@@ -28,3 +28,17 @@ export class Restaurant{
         this.image = image;
     }
 }
+
+export class Food{
+    public name!:string;
+    public price!:number;
+    public image!:string;
+    public rating!:number;
+
+    constructor(name: string, price: number, image: string, rating: number) {
+        this.name = name;
+        this.price = price;
+        this.image = image;
+        this.rating = rating;
+    }
+}

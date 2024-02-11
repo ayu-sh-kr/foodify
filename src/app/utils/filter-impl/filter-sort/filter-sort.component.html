@@ -1,0 +1,28 @@
+<section class="w-full h-full px-3 py-2 font-light">
+    <div>
+        <div class="flex items-center justify-start gap-5 text-lg my-4 cursor-pointer py-2" (click)="setSort('Popularity')">
+            <input type="radio" name="sort" class="radio" id="sort" value="popularity" [checked]="value == 'Popularity'">
+            <label for="sort" class="block cursor-pointer">Popularity</label>
+        </div>
+
+        <div class="flex items-center justify-start gap-5 text-lg my-4 cursor-pointer py-2" (click)="setSort('Rating: High to Low')">
+            <input type="radio" name="sort" class="radio" id="rating" value="high-to-low" [checked]="value == 'Rating: High to Low'">
+            <label for="rating" class="block cursor-pointer">Rating: High to Low</label>
+        </div>
+
+        <div class="flex items-center justify-start gap-5 text-lg my-4 cursor-pointer py-2" (click)="setSort('Delivery Time')">
+            <input type="radio" name="sort" class="radio block" id="delivery-time" value="delivery-time" [checked]="value == 'Delivery Time'">
+            <label for="delivery-time" class="block cursor-pointer">Delivery Time</label>
+        </div>
+
+        <div class="flex items-center justify-start gap-5 text-lg my-4 cursor-pointer py-2" (click)="setSort('Cost: Low to High')">
+            <input type="radio" name="sort" class="radio" id="cost-low" value="cost-low" [checked]="value == 'Cost: Low to High'">
+            <label for="cost-low" class="block cursor-pointer">Cost: Low to High</label>
+        </div>
+
+        <div class="flex items-center justify-start gap-5 text-lg my-4 cursor-pointer py-2" (click)="setSort('Cost: High to Low')">
+            <input type="radio" name="sort" class="radio" id="cost-high" value="cost-high" [checked]="value == 'Cost: High to Low'">
+            <label for="cost-high" class="block cursor-pointer">Cost: High to Low</label>
+        </div>
+    </div>
+</section>

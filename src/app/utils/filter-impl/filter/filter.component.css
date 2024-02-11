@@ -1,0 +1,4 @@
+.filter-active{
+    @apply border-rose-600 bg-white
+}
+

@@ -1,0 +1,7 @@
+.element{
+    @apply flex gap-2 border rounded-md border-slate-400 px-2 font-light items-center cursor-pointer max-h-[36px] min-w-fit;
+}
+
+.scroll-width-none{
+    scrollbar-width: none;
+}

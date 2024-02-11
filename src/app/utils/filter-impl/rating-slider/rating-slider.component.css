@@ -1,0 +1,7 @@
+.slider::-webkit-slider-thumb {
+    @apply -mt-1 w-5 h-5 bg-rose-600 rounded-full appearance-none cursor-pointer py-1;
+}
+
+.slider::-moz-range-thumb {
+    @apply -mt-1 w-5 h-5 bg-rose-600 rounded-full cursor-pointer py-1;
+}

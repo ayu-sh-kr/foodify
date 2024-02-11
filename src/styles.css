@@ -3,3 +3,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .radio {
+        @apply appearance-none w-5 h-5 border-2 border-gray-500 rounded-full outline-none relative cursor-pointer;
+    }
+
+    .radio:hover{
+        @apply border-rose-600
+    }
+
+    .radio:before {
+        @apply block w-2 h-2 border-2 border-rose-600 bg-rose-600 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 transition-opacity duration-200;
+        content: '';
+    }
+
+    .radio:checked:before {
+        @apply opacity-100 bg-rose-600;
+    }
+
+    .radio:checked{
+        @apply border-rose-600
+    }
+}

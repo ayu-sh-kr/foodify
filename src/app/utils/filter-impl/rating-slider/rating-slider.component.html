@@ -1,0 +1,5 @@
+<div class="flex justify-center items-center w-full h-full">
+    <input type="range" min="0" max="5" step="0.5" [(ngModel)]="rating" (ngModelChange)="onRatingChange($event)"
+           class="slider my-1 w-full h-1 bg-gray-300 outline-none appearance-none hover:bg-rose-600 transition duration-200 ease-in-out cursor-pointer">
+    <div class="ml-2">{{rating}}</div>
+</div>

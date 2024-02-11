@@ -1,0 +1,67 @@
+<div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 backdrop-blur-sm z-30 flex justify-center items-center" (click)="close()">
+    <div class="bg-white rounded-md min-w-[320px] sm:min-w-[480px] md:min-w-[700px] py-2" (click)="$event.stopPropagation()">
+        <div class="flex justify-between p-3 items-center text-xl font-helvetica font-medium border-b-2">
+            <div>Filter</div>
+            <div class="cursor-pointer" (click)="close()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+            </div>
+        </div>
+        <div class="flex w-full h-[400px]">
+            <div class="w-[180px]">
+                <div class="bg-slate-50 pl-5 flex flex-col justify-center py-3 cursor-pointer border-l-4 h-[80px]"
+                     (click)="setActive('sort')" [class.filter-active]="activeDiv === 'sort'"   #sort>
+                    <div class="font-helvetica text-xl">
+                        Sort by
+                    </div>
+                    <div class="text-rose-400 text-sm font-okra">
+                        {{ value }}
+                    </div>
+                </div>
+                <div class="bg-slate-50 pl-5 flex flex-col justify-center py-3 cursor-pointer border-l-4 h-[80px]"
+                     (click)="setActive('cuisine')" [class.filter-active]="activeDiv === 'cuisine'" #cuisine>
+                    <div class="font-helvetica text-xl">
+                        Cuisines
+                    </div>
+                </div>
+                <div class="bg-slate-50 pl-5 flex flex-col justify-center py-3 cursor-pointer border-l-4 h-[80px]"
+                     (click)="setActive('rating')" [class.filter-active]="activeDiv === 'rating'" #ratingC>
+                    <div class="font-helvetica text-xl">
+                        Rating
+                    </div>
+                </div>
+                <div class="bg-slate-50 pl-5 flex flex-col justify-center py-3 cursor-pointer border-l-4 h-[80px]"
+                     (click)="setActive('other')" [class.filter-active]="activeDiv === 'other'" #other>
+                    <div class="font-helvetica text-xl">
+                        Other
+                    </div>
+                </div>
+            </div> <!--Side section-->
+            <div class="w-4/6 h-full">
+                <div class="w-4/6 h-full">
+                    <ng-template [ngIf]="activeDiv === 'sort'">
+                        <app-filter-sort [(value)]="value"></app-filter-sort>
+                    </ng-template>
+                    <ng-template [ngIf]="activeDiv === 'cuisine'">
+                        <!-- Add your 'cuisine' content here -->
+                    </ng-template>
+                    <ng-template [ngIf]="activeDiv === 'rating'">
+                        <!-- Add your 'rating' content here -->
+                        <div class="py-3">
+                            <div class="w-full py-3 px-5 text-lg font-okra flex gap-3 items-center">
+                                <div class="font-light">Rating</div> <div class="text-rose-600 text-lg font-semibold">{{rating}}</div>
+                            </div>
+                        </div>
+                        <div class="px-5 w-full h-full">
+                            <app-rating-slider [(rating)]="rating"></app-rating-slider>
+                        </div>
+                    </ng-template>
+                    <ng-template [ngIf]="activeDiv === 'other'">
+                        <!-- Add your 'other' content here -->
+                    </ng-template>
+                </div>
+            </div> <!--Content-->
+        </div>
+    </div>
+</div>
