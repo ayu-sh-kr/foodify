@@ -1,0 +1,58 @@
+<div class="w-full relative border-b">
+    <div class="mx-auto max-w-6xl w-full flex items-center py-4 justify-between">
+        <div class="md:hidden font-helvetica text-3xl flex items-center justify-center font-extrabold text-center cursor-pointer" (click)="showHeaderUtil()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-black text-2xl">
+                <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="flex justify-around p-2 w-[285px]">
+            <div class="text-3xl font-semibold font-helvetica">Capsicum</div>
+            <div class="text-sm font-okra text-rose-600">Powered by Foodify</div>
+        </div>
+        <div class="md:flex hidden w-[60%] justify-between">
+            <div class="w-3/5">
+                <div class="absolute p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <input type="text" class="border p-2 text-center font-okra placeholder:text-center rounded-md block w-full" placeholder="search for your meal here">
+            </div>
+            <div class="w-2/5 flex justify-center gap-5 items-center text-left font-okra text-slate-600 text-xl tex">
+                @if(loggedIn){
+                    <div class="px-3 py-1">Logged</div>
+                } @else {
+                    <span class="block px-3 py-1 hover:text-black cursor-pointer" (click)="showLogin()">Login</span>
+                    <span class="block px-3 py-1 hover:text-black cursor-pointer" (click)="showRegister()">Signup</span>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-full max-w-6xl mx-auto relative">
+    <div class="w-full p-2"  [hidden]="headerUtil">
+        <div class="w-full  md:hidden">
+            <div class="absolute p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+                </svg>
+            </div>
+            <input type="text" class="border p-2 text-center font-okra placeholder:text-center
+            rounded-md block w-full focus:outline-none focus:ring-rose-600 focus:ring-2"
+                   placeholder="search for your meal here">
+        </div>
+        <div class="w-full bg-white font-helvetica text-center text-xl mt-2 items-center" (click)="showLogin()">
+            <div class="rounded-md border shadow-md px-3 py-1 cursor-pointer hover:text-rose-600">
+                Login
+            </div>
+        </div>
+        <div class="w-full bg-white font-helvetica text-center text-xl mt-2 items-center" (click)="showRegister()">
+            <div class="rounded-md border shadow-md px-3 py-1 cursor-pointer hover:text-rose-600">
+                Register
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-login [hidden]="login" [(login)]="login"></app-login>
+<app-register [hidden]="register" [(register)]="register"></app-register>

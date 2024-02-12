@@ -1,7 +1,7 @@
-<div class="p-2 flex justify-center flex-wrap sm:justify-self-center gap-5 min-w-[320px] w-full border-t-2">
+<div class="p-2 flex justify-center flex-wrap sm:justify-start md:justify-between gap-5 min-w-[320px] w-full border-t-2">
 
     @for (restaurant of restaurantDetails; track restaurant){
-        <div class="bg-white rounded-md px-2 py-3 min-w-[280px] w-[340px] overflow-hidden hover:shadow-xl">
+        <div class="bg-white rounded-md px-2 py-3 min-w-[280px] w-[30%] overflow-hidden hover:shadow-xl">
             <div class="rounded-xl overflow-y-hidden h-[248px] overflow-hidden">
                 <img src="{{restaurant.image}}"
                      class="rounded-xl w-full h-full object-cover" alt="yellow-door">
