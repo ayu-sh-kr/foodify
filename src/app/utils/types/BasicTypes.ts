@@ -30,10 +30,13 @@ export class Restaurant{
 }
 
 export class Food{
+    public id?:string;
     public name!:string;
     public price!:number;
     public image!:string;
     public rating!:number;
+    public description!:string;
+    public category?:string;
 
     constructor(name: string, price: number, image: string, rating: number) {
         this.name = name;
