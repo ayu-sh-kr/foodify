@@ -1,0 +1,50 @@
+<div class="w-full p-2 my-4 bg-slate-50">
+    <div class="text-3xl font-helvetica font-semibold my-2 text-slate-800">
+        {{category}}
+    </div>
+    <div class="font-okra my-2 text-slate-600">
+        {{description}}
+    </div>
+    <div class="w-full flex flex-wrap justify-center sm:justify-around gap-5 lg:justify-between">
+        @for (food of foods; track food.id){
+            <div class="min-w-[300px] sm:w-[27%] p-2 font-okra bg-white hover:shadow-md rounded-xl px-3">
+                @if (food.category === 'Veg'){
+                    <div class="w-full flex items-center gap-3 font-semibold text-slate-600 my-2">
+                        <img src="assets/images/category/veg.png" class="h-6 w-6">
+                        <p>Veg</p>
+                    </div>
+                } @else {
+
+                    <div class="w-full flex items-center gap-3 font-semibold text-slate-600 my-2">
+                        <img src="assets/images/category/non-veg.png" class="w-5 h-5 p-0.5">
+                        <p>Non Veg</p>
+                    </div>
+
+                }
+
+                <div>
+                    <!--        img        -->
+                    <div class="w-full max-h-[200px] overflow-hidden object-contain">
+                        <img src="{{food.image}}" alt="{{food.name}}" class="hover:scale-105 w-full max-h-[200px]">
+                    </div>
+                </div>
+                <div class="font-helvetica text-xl font-semibold text-slate-800 my-2">
+                    <!--        name-->
+                    <p>{{food.name}}</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="font-helvetica">
+                        <!--            price-->
+                        <p class="text-lg font-semibold text-slate-800">&#8377; {{food.price}}</p>
+                        <p class="font-okra font-bold text-sm text-slate-600">50% OFF</p>
+                    </div>
+                    <div class="w-[40%]">
+                        <!--            add-->
+                        <button class="w-full px-3 py-1 text-white font-semibold rounded-3xl bg-gradient-to-r from-rose-400 via-rose-500 to-rose-600">Add</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>
