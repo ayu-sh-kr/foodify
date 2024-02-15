@@ -6,6 +6,7 @@ import {CarouselComponent} from "../utils/carousel/carousel.component";
 import {RestaurantFoodComponent} from "./restaurant-food/restaurant-food.component";
 import {FooterComponent} from "../landing/footer/footer.component";
 import {Food} from "../utils/types/BasicTypes";
+import {RestaurantProfileComponent} from "./restaurant-profile/restaurant-profile.component";
 
 @Component({
     selector: 'app-restaurant-main',
@@ -16,7 +17,8 @@ import {Food} from "../utils/types/BasicTypes";
         RestaurantHeaderComponent,
         CarouselComponent,
         RestaurantFoodComponent,
-        FooterComponent
+        FooterComponent,
+        RestaurantProfileComponent
     ],
     templateUrl: './restaurant-main.component.html',
     styleUrl: './restaurant-main.component.css'
