@@ -1,10 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {Food} from "../../utils/types/BasicTypes";
+import {PagingComponent} from "../../utils/paging/paging.component";
 
 @Component({
     selector: 'app-restaurant-food',
     standalone: true,
-    imports: [],
+    imports: [
+        PagingComponent
+    ],
     templateUrl: './restaurant-food.component.html',
     styleUrl: './restaurant-food.component.css'
 })

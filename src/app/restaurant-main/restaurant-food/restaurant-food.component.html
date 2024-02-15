@@ -7,16 +7,16 @@
     </div>
     <div class="w-full flex flex-wrap justify-center sm:justify-around gap-5 lg:justify-between">
         @for (food of foods; track food.id){
-            <div class="min-w-[300px] sm:w-[27%] p-2 font-okra bg-white hover:shadow-md rounded-xl px-3">
+            <div class="min-w-[300px] sm:w-[27%] p-2 font-okra bg-white hover:shadow-md ease-in-out rounded-xl px-3">
                 @if (food.category === 'Veg'){
                     <div class="w-full flex items-center gap-3 font-semibold text-slate-600 my-2">
-                        <img src="assets/images/category/veg.png" class="h-6 w-6">
+                        <img src="assets/images/category/veg.png" alt="veg" class="h-6 w-6">
                         <p>Veg</p>
                     </div>
                 } @else {
 
                     <div class="w-full flex items-center gap-3 font-semibold text-slate-600 my-2">
-                        <img src="assets/images/category/non-veg.png" class="w-5 h-5 p-0.5">
+                        <img src="assets/images/category/non-veg.png" alt="non veg" class="w-5 h-5 p-0.5">
                         <p>Non Veg</p>
                     </div>
 
@@ -24,8 +24,8 @@
 
                 <div>
                     <!--        img        -->
-                    <div class="w-full max-h-[200px] overflow-hidden object-contain">
-                        <img src="{{food.image}}" alt="{{food.name}}" class="hover:scale-105 w-full max-h-[200px]">
+                    <div class="w-full max-h-[200px] overflow-hidden object-contain hover:object-cover aspect-square">
+                        <img src="{{food.image}}" alt="{{food.name}}" class="w-full max-h-[200px]">
                     </div>
                 </div>
                 <div class="font-helvetica text-xl font-semibold text-slate-800 my-2">
@@ -46,5 +46,5 @@
             </div>
         }
     </div>
-
+    <app-paging [(data)]="foods" ></app-paging>
 </div>
