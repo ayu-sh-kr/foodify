@@ -1,3 +1,4 @@
+import {comment} from "postcss";
 
 
 export class Collection{
@@ -68,4 +69,27 @@ export class RestaurantDetails{
         this.localisedAddress = localisedAddress;
         this.image = image;
     }
+}
+
+export class Review{
+    public username!:string;
+    public rating!:string;
+    public text!:string;
+    public comment!:string;
+    public orderType!:string;
+    public votes!:number
+    public time!:string;
+
+
+    constructor(username: string, rating: string, text: string,
+                comment: string, orderType: string, votes: number, time:string) {
+        this.username = username;
+        this.rating = rating;
+        this.text = text;
+        this.comment = comment;
+        this.orderType = orderType;
+        this.votes = votes;
+        this.time = time;
+    }
+
 }

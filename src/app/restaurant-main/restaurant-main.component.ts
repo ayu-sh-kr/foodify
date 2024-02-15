@@ -7,6 +7,7 @@ import {RestaurantFoodComponent} from "./restaurant-food/restaurant-food.compone
 import {FooterComponent} from "../landing/footer/footer.component";
 import {Food} from "../utils/types/BasicTypes";
 import {RestaurantProfileComponent} from "./restaurant-profile/restaurant-profile.component";
+import {RestaurantSubHeaderComponent} from "./restaurant-subheader/restaurant-sub-header.component";
 
 @Component({
     selector: 'app-restaurant-main',
@@ -18,7 +19,8 @@ import {RestaurantProfileComponent} from "./restaurant-profile/restaurant-profil
         CarouselComponent,
         RestaurantFoodComponent,
         FooterComponent,
-        RestaurantProfileComponent
+        RestaurantProfileComponent,
+        RestaurantSubHeaderComponent
     ],
     templateUrl: './restaurant-main.component.html',
     styleUrl: './restaurant-main.component.css'

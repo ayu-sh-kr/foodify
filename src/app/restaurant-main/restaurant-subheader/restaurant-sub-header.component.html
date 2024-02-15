@@ -1,0 +1,12 @@
+<div class="flex justify-start gap-x-10 px-2 font-okra text-xl text-slate-500 border-b-2 bg-white">
+    <div class="hover:text-pink-500 px-3 hover:border-rose-600 border-b-2 cursor-pointer"
+         [class.active]="activeClass === 'overview'"  (click)="setActive('overview')">Overview</div>
+    <div class="hover:text-pink-500 px-3 hover:border-rose-600 border-b-2 cursor-pointer"
+         [class.active]="activeClass === 'orderOnline'"  (click)="setActive('orderOnline')">Order Online</div>
+    <div class="hover:text-pink-500 px-3 hover:border-rose-600 border-b-2 cursor-pointer"
+         [class.active]="activeClass === 'reviews'"  (click)="setActive('reviews')">Reviews</div>
+    <div class="hover:text-pink-500 px-3 hover:border-rose-600 border-b-2 cursor-pointer"
+         [class.active]="activeClass === 'photos'"  (click)="setActive('photos')">Photos</div>
+    <div class="hover:text-pink-500 px-3 hover:border-rose-600 border-b-2 cursor-pointer"
+         [class.active]="activeClass === 'menu'"  (click)="setActive('menu')">Menu</div>
+</div>
