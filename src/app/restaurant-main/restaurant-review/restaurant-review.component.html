@@ -1,0 +1,19 @@
+<div class="p-2">
+    @for (review of reviews; track review.text){
+        <div class="border-b-2 my-2 bg-white">
+            <div class="flex gap-x-4 items-center font-helvetica text-lg font-medium text-slate-800 my-2">
+                <div class="object-contain">
+                    <img src="assets/images/user/profile.png" class="w-9 h-9">
+                </div>
+                <div>
+                    {{review.username}}
+                </div>
+            </div>
+            <div class="flex justify-start items-center gap-x-3 text-sm text-slate-600">
+                <div class="px-2 bg-green-900 text-white rounded-md">5 &#9733;</div>
+                <div>Delivery</div>
+                <div>1 Month ago</div>
+            </div>
+        </div>
+    }
+</div>

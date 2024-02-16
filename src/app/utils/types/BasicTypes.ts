@@ -1,4 +1,3 @@
-import {comment} from "postcss";
 
 
 export class Collection{
@@ -73,7 +72,7 @@ export class RestaurantDetails{
 
 export class Review{
     public username!:string;
-    public rating!:string;
+    public rating!:number;
     public text!:string;
     public comment!:string;
     public orderType!:string;
@@ -81,7 +80,7 @@ export class Review{
     public time!:string;
 
 
-    constructor(username: string, rating: string, text: string,
+    constructor(username: string, rating: number, text: string,
                 comment: string, orderType: string, votes: number, time:string) {
         this.username = username;
         this.rating = rating;
