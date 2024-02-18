@@ -53,5 +53,7 @@ export class RestaurantReviewComponent {
     ];
 
 
-
+    upVote(review: Review) {
+        review.votes += 1
+    }
 }
