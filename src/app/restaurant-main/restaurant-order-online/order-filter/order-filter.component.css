@@ -1,0 +1,7 @@
+.filter-active{
+    @apply bg-gradient-to-l from-rose-300 to-rose-50 text-rose-500 border-rose-600;
+}
+
+.scroll-width-none{
+    scrollbar-width: none;
+}
