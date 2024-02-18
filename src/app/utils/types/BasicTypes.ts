@@ -90,5 +90,14 @@ export class Review{
         this.votes = votes;
         this.time = time;
     }
-
 }
+
+export type OrderCombo = {
+    name:string,
+    description:string,
+    category:string,
+    subcategory:string
+    price:number
+}
+
+
